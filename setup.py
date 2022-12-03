@@ -1,22 +1,32 @@
-import setuptools
+from setuptools import setup, find_packages
+import codecs
+import os
 
-with open("README.md", "r") as fhandle:
-    long_description = fhandle.read() # Your README.md file will be used as the long description!
+here = os.path.abspath(os.path.dirname(__file__))
 
-setuptools.setup(
-    name="color4py", # Put your pkg name here!
-    version="1.0.0", # The version of your package!
-    author="hayoto", # Your name here!
-    author_email="hayoto.dev@gmail.com", # Your e-mail here!
-    description="A Project which allows you to use colors in the terminal!", # A short description here!
-    long_description=long_description,
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\n" + fh.read()
+
+VERSION = '1.0.0'
+DESCRIPTION = 'A Project which allows you to use colors in the terminal!'
+LONG_DESCRIPTION = 'A Project which allows you to use colors in the terminal!'
+
+# Setting up
+setup(
+    name="color4py",
+    version=VERSION,
+    author="hayoto",
+    author_email="<hayoto.dev@gmail.com>",
+    description=DESCRIPTION,
     long_description_content_type="text/markdown",
-    url="https://github.com/neverjar/color4py", # Link your package website here! (most commonly a GitHub repo)
-    packages=["colorama", "fade"], # A list of all packages for Python to distribute!
+    long_description=long_description,
+    packages=find_packages(),
+    install_requires=["colorama", "fade"],
+    keywords=['coloring', 'colors', 'fading', 'fade'],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ], # Enter meta data into the classifiers list!
-    python_requires='>=3.6', # The version requirement for Python to run your package!
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
 )
