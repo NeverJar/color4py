@@ -1,9 +1,10 @@
 import fade
 from color4py import system
 from colorama import Fore
+from enum import Enum
 
 __AUTHOR__   = 'hayoto'
-__VERSION__  = '1.0.0'
+__VERSION__  = '1.0.1'
 __LICENSE__  = 'MIT'
 
 class Coloring:
@@ -27,25 +28,16 @@ class Coloring:
     LIGHTYELLOW    = Fore.LIGHTYELLOW_EX
     LIGHTWHITE     = Fore.LIGHTWHITE_EX
 
-class Fade:
+class Effect(Enum):
     """
     Fade your Text!
     """
-    def blackwhite(text):
-        return fade.blackwhite(text)
-    def purplepink(text):
-        return fade.purplepink(text)
-    def greenblue(text):
-        return fade.greenblue(text)
-    def water(text):
-        return fade.water(text)
-    def yellowred(text):
-        return fade.fire(text)
-    def pinkred(text):
-        return fade.pinkred(text)
-    def purpleblue(text):
-        return fade.purpleblue(text)
-    def greenyellow(text):
-        return fade.brazil(text)
-    def glitch(text):
-        return fade.random(text)
+    BLACKWHITE = fade.blackwhite
+    PURPLEPINK = fade.purplepink
+    GREENBLUE = fade.greenblue
+    WATER = fade.water
+    YELLOWRED = fade.fire
+    PINKRED = fade.pinkred
+    PURPLEBLUE = fade.purpleblue
+    BRAZIL = fade.brazil
+    RANDOM = fade.random
