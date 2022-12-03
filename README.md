@@ -64,3 +64,4 @@ print(Fade.purplepink("Faded Text\nNow with color4py :)"))
 ## Thanks for the contributors <3
 [BillyTheGoat356](https://github.com/billythegoat356)
 [Tartley](https://github.com/tartley)
+[xl](https://discord.com/users/781632044735135744)
