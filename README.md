@@ -51,13 +51,13 @@ yellowred
 pinkred
 purpleblue
 greenyellow
-random
+glitch
 ```
 
 ```py
 from color4py import Fade
 
-print(Fade.purplepink("Faded Text\nNow with color4py :)"))
+print(Effect.PURPLEPINK("Faded Text\nNow with color4py :)"))
 ```
 
 
