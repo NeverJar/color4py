@@ -51,7 +51,7 @@ yellowred
 pinkred
 purpleblue
 greenyellow
-glitch
+random
 ```
 
 ```py
